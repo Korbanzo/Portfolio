@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MediaIcon = ({image, onClick}) => {
     return (
         <>
@@ -8,8 +6,8 @@ const MediaIcon = ({image, onClick}) => {
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            width: '30px',
-            height: '30px',
+            width: '2vw',
+            height: '2vw',
             cursor: onClick ? 'pointer' : 'default',
             display: 'inline-flex',
             marginInline: '.2vw',

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Game Forest",
+        "description": "Game Forest is a hub for all your games! As of right now, you need to add the path to the .exe of all your games. Game Forest saves only the name of the game, and path to that game in a .json file, created upon first input of a valid path to a .exe.",
+        "id": 1
+    },
+    {
+        "name": "Pinball Game",
+        "description": "A little pinball game with my own physics.",
+        "id": 2
+    },
+    {
+        "name": "Sea of Thieves Cooking Timer",
+        "description": "A cooking timer for Sea of Thieves that I made in HTML, CSS, and Javascript!",
+        "id": 3
+    },
+    {
+        "name": "Geometry Dash NoClip",
+        "description": "A NoClip mod for Geometry Dash using Geode",
+        "id": 4
+    },
+    {
+        "name": "Physics Project",
+        "description": "After gaining knowledge from Pinball Game, I decided to make a program for my physics class to showcase projectile motion.",
+        "id": 5
+    }
+]
