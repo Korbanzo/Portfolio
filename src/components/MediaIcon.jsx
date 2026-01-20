@@ -1,16 +1,14 @@
-const MediaIcon = ({image, onClick}) => {
+const MediaIcon = ({className, image, onClick}) => {
     return (
         <>
-        <div className="media-icon" style={{
+        <div className={`media-icon ${className || ''}`} style={{
             backgroundImage: `url(${image})`,
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            width: '2vw',
-            height: '2vw',
+            width: '50px',
+            height: '50px',
             cursor: onClick ? 'pointer' : 'default',
-            display: 'inline-flex',
-            marginInline: '.2vw',
         }} onClick={onClick}/>
         </>
     );

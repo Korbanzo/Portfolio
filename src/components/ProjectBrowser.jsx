@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import projectJSON from '../assets/projects.json'
-import DoublyLinkedList from '../utils/DoublyLinkedList';
+import DoublyLinkedList from '../utils/DoublyLinkedList'
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];
@@ -14,30 +14,36 @@ const ProjectBrowser = ({}) => {
     let list = DoublyLinkedList.FromArray(jsonArray);
 
     const [current, setCurrent] = useState(list.head);
+    const [direction, setDirection] = useState("");
+    const [key, setKey] = useState(0);
         
     const ShowNextProject = () => {
-        if (!current) return;
         const next = current.next ?? current;
         setCurrent(next);
+        setDirection("next");
+        setKey(prev => prev + 1);
     }
 
     const ShowPreviousProject = () => {
-        if (!current) return;
         const prev = current.prev ?? current;
         setCurrent(prev);
+        setDirection("prev");
+        setKey(prev => prev + 1);
     }
 
     return (
         <div>
-        <button onClick={ShowPreviousProject} style={{}}></button> <button onClick={ShowNextProject} style={{}}></button>
-        {
-            current && (
-                <div key={current.id}>
+            <button id="prev" onClick={ShowPreviousProject} style={{}}></button> <button id="next" onClick={ShowNextProject} style={{}}></button>
+            <div key={key} className={`description_wrapper animate-${direction}`}> 
+            {
+                current && (
+                    <>
                     <h2>{current.name}</h2>
                     <p>{current.description}</p>
                     <hr />
-                </div>
-            )}
+                    </>
+                )}
+            </div>   
         </div>
     );
 };
