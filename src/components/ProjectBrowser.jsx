@@ -61,7 +61,7 @@ const ProjectBrowser = ({}) => {
     return (
         <div>
             <button id="prev" onClick={ShowPreviousProject} style={{}}></button> <button id="next" onClick={ShowNextProject} style={{}}></button>
-            <div key={key} className={`description_wrapper animate-${direction}${atEnd != 0 ? "never mind lol" : ""}`}> 
+            <div key={key} className={`description_wrapper animate-${direction}${atEnd != middle ? "never mind lol" : ""}`}> 
             {
                 current && (
                     <>
