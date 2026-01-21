@@ -9,12 +9,16 @@ const jsonToArray = (jsonFile) => {
     return jsonArray;
 }
 
+const beginning = -1;
+const middle = 0;
+const end = 1;
+
 const ProjectBrowser = ({}) => {
     let jsonArray = jsonToArray(projectJSON);
     let list = DoublyLinkedList.FromArray(jsonArray);
 
     const [current, setCurrent] = useState(list.head);
-    const [atEnd, setAtEnd] = useState(-1); // -1 for at beginning, 0 for in the middle, 1 for at end
+    const [atEnd, setAtEnd] = useState(beginning); // -1 for at beginning, 0 for in the middle, 1 for at end
     const [direction, setDirection] = useState("");
     const [key, setKey] = useState(0);
         
@@ -29,8 +33,8 @@ const ProjectBrowser = ({}) => {
         setCurrent(next);
 
         if (!current.next) {
-            setAtEnd(1);
-        } else { setAtEnd(0); }
+            setAtEnd(end);
+        } else { setAtEnd(middle); }
 
         setDirection("next");
         setKey(prev => prev + 1);
@@ -47,8 +51,8 @@ const ProjectBrowser = ({}) => {
         setCurrent(prev);
 
         if (!current.prev) {
-            setAtEnd(-1);
-        } else { setAtEnd(0); }
+            setAtEnd(beginning);
+        } else { setAtEnd(middle); }
 
         setDirection("prev");
         setKey(prev => prev + 1);
