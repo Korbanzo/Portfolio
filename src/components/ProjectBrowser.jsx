@@ -14,19 +14,42 @@ const ProjectBrowser = ({}) => {
     let list = DoublyLinkedList.FromArray(jsonArray);
 
     const [current, setCurrent] = useState(list.head);
+    const [atEnd, setAtEnd] = useState(-1); // -1 for at beginning, 0 for in the middle, 1 for at end
     const [direction, setDirection] = useState("");
     const [key, setKey] = useState(0);
         
     const ShowNextProject = () => {
-        const next = current.next ?? current;
+        let next;
+        if (!current.next) {
+            next = current;
+        } else {
+            next = current.next;
+        }
+        
         setCurrent(next);
+
+        if (!current.next) {
+            setAtEnd(1);
+        } else { setAtEnd(0); }
+
         setDirection("next");
         setKey(prev => prev + 1);
     }
 
     const ShowPreviousProject = () => {
-        const prev = current.prev ?? current;
+        let prev;
+        if (!current.prev) {
+            prev = current;
+        } else {
+            prev = current.prev;
+        }
+        
         setCurrent(prev);
+
+        if (!current.prev) {
+            setAtEnd(-1);
+        } else { setAtEnd(0); }
+
         setDirection("prev");
         setKey(prev => prev + 1);
     }
@@ -34,7 +57,7 @@ const ProjectBrowser = ({}) => {
     return (
         <div>
             <button id="prev" onClick={ShowPreviousProject} style={{}}></button> <button id="next" onClick={ShowNextProject} style={{}}></button>
-            <div key={key} className={`description_wrapper animate-${direction}`}> 
+            <div key={key} className={`description_wrapper animate-${direction}${atEnd != 0 ? "never mind lol" : ""}`}> 
             {
                 current && (
                     <>
