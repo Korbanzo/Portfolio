@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import projectJSON from '../assets/projects.json'
 import DoublyLinkedList from '../utils/DoublyLinkedList'
+import arrowImage from '../assets/arrow.png'
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];
-    jsonFile.map(project => (jsonArray.push([project.name, project.description, project.id])))
+    jsonFile.map(project => (jsonArray.push([project.name, project.description, project.link, project.id])))
 
     return jsonArray;
 }
@@ -60,16 +61,18 @@ const ProjectBrowser = ({}) => {
 
     return (
         <div>
-            <button id="prev" onClick={ShowPreviousProject} style={{}}></button> <button id="next" onClick={ShowNextProject} style={{}}></button>
-            <div key={key} className={`description_wrapper animate-${direction}${atEnd != middle ? "never mind lol" : ""}`}> 
+            <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(${arrowImage})`, transform: 'rotate(180deg)'}}/>
+            <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(${arrowImage})`}}/>
+            <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""}`} style={{ color: "#7ef97e" }}>
             {
                 current && (
                     <>
-                    <h2>{current.name}</h2>
+                    <h2 className="project_browser_title" onClick={() => open(`${current.link}`)} style={{}}> {current.name} </h2>
                     <p>{current.description}</p>
                     <hr />
                     </>
-                )}
+                )
+            }
             </div>   
         </div>
     );

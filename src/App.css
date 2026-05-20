@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameplate {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #7ef97e;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(89, 85, 85, 0.764);
+  font-weight: 700;
+  margin-top: 100px;
+  border-radius: 2%;
+  min-width: 40vw;
+  max-width: 40vw;
+}
+
+.resume-icon,
+.github-icon,
+.email-icon,
+.linkedin-icon {
+  align-self: center;
+  margin-right: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.resume-icon:hover,
+.github-icon:hover,
+.email-icon:hover,
+.linkedin-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}

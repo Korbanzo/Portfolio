@@ -1,38 +1,7 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .container {  
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
-
-.resume-icon {
-  align-self: flex-end;
-}
-
-.github-icon {
-  align-self: flex-end;
-}
-
-.email-icon {
-  align-self: flex-end;
-}
-
-.linkedin-icon {
-  align-self: flex-end;
 }
 
 @keyframes slideInNext {
@@ -48,7 +17,7 @@
 @keyframes slideInPrev {
   from {
     opacity: 0%;
-    transform: translateX(-100%) translateY(-30%);
+    transform: translateX(-100%) translateY(30%);
   } to {
     opacity: 100%;
     transform: translateX(0%) translateY(0%);
@@ -59,7 +28,26 @@
   animation: slideInNext .5s ease-in-out;
 }
 
-
 .animate-prev {
   animation: slideInPrev 0.5s ease-in-out;
+}
+
+.project_browser_title {
+  transition: transform .2s;
+}
+
+.project_browser_title:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
+}
+
+.arrowButton {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin-right: 50px;
+  border-radius: 20%;
+  border-width: 0px;
 }
