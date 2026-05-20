@@ -36,7 +36,7 @@
   transition: transform .2s;
 }
 
-.project_browser_title:hover {
+.project_browser_title:hover{
   cursor: pointer;
   transform: translateY(-10%);
 }
@@ -50,4 +50,8 @@
   margin-right: 50px;
   border-radius: 20%;
   border-width: 0px;
+}
+
+.arrowButton:hover {
+  
 }

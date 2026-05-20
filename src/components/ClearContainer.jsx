@@ -11,11 +11,11 @@ const ClearContainer = ({ children }) => {
                 minWidth: '50vw',
                 maxWidth: '50vw',
                 borderRadius: '2%',
-                boxShadow: '0px 0px 15px green'
+                boxShadow: '0px 0px 15px green',
+                color: '#7ef97e'
             }}>
 
                 {children}
-
                 
             </div>
         </>

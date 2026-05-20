@@ -10,8 +10,10 @@ import MediaIcon from './components/MediaIcon'
 import ProjectBrowser from './components/ProjectBrowser'
 import ClearContainer from './components/ClearContainer'
 import ProfilePicture from './components/ProfilePicture'
+import WeatherDenver from './components/WeatherDenver'
 
 function App() {
+  
   return (
     <>
     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
@@ -40,8 +42,10 @@ function App() {
 
         <br/>
 
+        <WeatherDenver/>
+
       </ClearContainer>
-    </div>      
+    </div> 
     </>
   )
 }
