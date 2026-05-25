@@ -6,13 +6,14 @@ const ClearContainer = ({ children }) => {
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
-                backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                backgroundColor: 'rgba(31, 31, 31, 0.5)',
                 minHeight: '100%',
                 minWidth: '50vw',
                 maxWidth: '50vw',
                 borderRadius: '2%',
                 boxShadow: '0px 0px 15px green',
-                color: '#7ef97e'
+                color: '#7ef97e',
+                padding: '3rem 2rem'
             }}>
 
                 {children}

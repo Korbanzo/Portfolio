@@ -14,35 +14,32 @@ import WeatherDenver from './components/WeatherDenver'
 
 function App() {
   
+  // Have a background that matches the weather in Denver. (Snowy -> Snowing down the background of the page)
+  // #7ef97e text color
+
   return (
     <>
-    <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+    <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
 
       <ClearContainer>
         <div className="nameplate">
           Korbin Brooks
         </div>
 
-        <br/>
-
-        <div style={{display: 'flex'}}>
-
+        <div className="social-icons">
           <MediaIcon className="resume-icon" image={resumeImage} onClick={() => open(`${resumeDoc}`)}/>
           <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
           <MediaIcon className="email-icon" image={emailImage} onClick={() => open("mailto:Brooks.m.Korbin@gmail.com")}/>
           <MediaIcon className="linkedin-icon" image={linkedinImage} onClick={() => open('https://www.linkedin.com/in/korbinbrooks')}/>
         </div>
-
-        <br/>
-        <br/>
         
-        <div style={{alignSelf: 'flex-start', marginLeft: '10px'}}>
+        <div className="projects-section">
           <ProjectBrowser></ProjectBrowser>
         </div>
 
-        <br/>
-
-        <WeatherDenver/>
+        <div className="weather-section">
+          <WeatherDenver/>
+        </div>
 
       </ClearContainer>
     </div> 

@@ -1,3 +1,12 @@
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+}
+
 body {
   background-color: black;
   display: flex;
@@ -7,26 +16,22 @@ body {
 }
 
 .nameplate {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 5rem;
   text-shadow: 2px 2px 4px rgba(89, 85, 85, 0.764);
-  font-weight: 700;
-  margin-top: 100px;
-  border-radius: 2%;
-  min-width: 40vw;
-  max-width: 40vw;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin: var(--spacing-lg) 0;
 }
 
 .resume-icon,
 .github-icon,
 .email-icon,
-.linkedin-icon,
-.arrowButton {
-  align-self: center;
-  margin-right: 2rem;
+.linkedin-icon {
   filter: drop-shadow(0 2px 4px rgba(20, 82, 20, 0.5));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -34,9 +39,18 @@ body {
 .resume-icon:hover,
 .github-icon:hover,
 .email-icon:hover,
-.linkedin-icon:hover,
-.arrowButton:hover {
+.linkedin-icon:hover {
   transform: scale(1.1);
   filter: drop-shadow(0px 0px 15px rgba(20, 82, 20, 0.5));
   cursor: pointer;
+}
+
+.projects-section {
+  margin: var(--spacing-lg) 0;
+  width: 100%;
+  text-align: left;
+}
+
+.weather-section {
+  margin-top: var(--spacing-lg);
 }

@@ -20,7 +20,7 @@ const ProjectBrowser = ({}) => {
     let list = DoublyLinkedList.FromArray(jsonArray);
 
     const [current, setCurrent] = useState(list.head);
-    const [atEnd, setAtEnd] = useState(beginning); // -1 for at beginning, 0 for in the middle, 1 for at end
+    const [atEnd, setAtEnd] = useState(beginning);
     const [direction, setDirection] = useState("");
     const [key, setKey] = useState(0);
         
@@ -61,16 +61,17 @@ const ProjectBrowser = ({}) => {
     }
 
     return (
-        <div>
-            <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(${leftArrowImage})`}}/>
-            <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(${rightArrowImage})`}}/>
+        <div style={{ width: '100%' }}>
+            <div className="arrow-controls">
+                <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(${leftArrowImage})`}}/>
+                <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(${rightArrowImage})`}}/>
+            </div>
             <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""}`} style={{ color: "#7ef97e" }}>
             {
                 current && (
                     <>
-                    <h2 className="project_browser_title" onClick={() => open(`${current.link}`)} style={{}}> {current.name} </h2>
-                    <p>{current.description}</p>
-                    <hr />
+                    <h2 className="project_browser_title" onClick={() => open(`${current.link}`)}>{current.name}</h2>
+                    <p className="project_browser_description">{current.description}</p>
                     </>
                 )
             }
