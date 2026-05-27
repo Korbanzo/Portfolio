@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import projectJSON from '../assets/projects.json'
 import DoublyLinkedList from '../utils/DoublyLinkedList'
-import leftArrowImage from '../assets/left-arrow.png'
-import rightArrowImage from '../assets/right-arrow.png'
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];
@@ -63,8 +61,8 @@ const ProjectBrowser = ({}) => {
     return (
         <div style={{ width: '100%' }}>
             <div className="arrow-controls">
-                <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(${leftArrowImage})`}}/>
-                <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(${rightArrowImage})`}}/>
+                <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(/src/assets/arrow-left.svg)`}}/>
+                <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(/src/assets/arrow-right.svg)`}}/>
             </div>
             <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""}`} style={{ color: "#7ef97e" }}>
             {

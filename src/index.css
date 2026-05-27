@@ -49,24 +49,24 @@ body {
 .arrow-controls {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
 .arrowButton {
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 20px;
-  width: 20px;
+  height: 35px;
+  width: 35px;
   border-radius: 20%;
-  border-width: 0px;
-  padding: 0.5rem;
+  border: none;
+  padding: 0;
   cursor: pointer;
   filter: drop-shadow(0 2px 4px rgba(20, 82, 20, 0.5));
   transition: transform 0.3s ease, filter 0.3s ease;
-  background-color: white;
+  background-color: transparent;
 }
 
 .arrowButton:hover {
