@@ -68,17 +68,13 @@ const WeatherIcons = {
 const WeatherDenver = () => {
 
     const [weather, setWeather] = useState(null);
-    const [isDay, setIsDay] = useState(null);
 
     useEffect( () => {
         fetch(URL)
             .then((response) => response.json())
             .then((data) => {
                 setWeather(data); 
-                setIsDay(data.current.is_day === 1);
             });
-
-            
     }, [])
 
     if (!weather) return <p>loading weather...</p>

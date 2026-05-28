@@ -24,6 +24,18 @@ body {
   }
 }
 
+@keyframes rainbowCircle {
+  from {
+    background-image: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet);
+  } to {
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+
+.animate-rainbow {
+  animation: rainbowCircle 1s infinite;
+}
+
 .animate-next {
   animation: slideInNext .5s ease-in-out;
 }
@@ -44,6 +56,13 @@ body {
 
 .project_browser_description {
   margin: 0;
+}
+
+.project_browser_skills {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 10px auto;
 }
 
 .arrow-controls {

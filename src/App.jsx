@@ -18,32 +18,28 @@ function App() {
   // #7ef97e text color
 
   return (
-    <>
-    <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
+    <ClearContainer>
+      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="nameplate">Korbin Brooks</div>
+        <ProfilePicture />
+      </div>
 
-      <ClearContainer>
-        <div className="nameplate">
-          Korbin Brooks
-        </div>
+      <div className="social-icons">
+        <MediaIcon className="resume-icon" image={resumeImage} onClick={() => open(`${resumeDoc}`)}/>
+        <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
+        <MediaIcon className="linkedin-icon" image={linkedinImage} onClick={() => open('https://www.linkedin.com/in/korbinbrooks')}/>
+        <MediaIcon className="email-icon" image={emailImage} onClick={() => open("mailto:Brooks.m.Korbin@gmail.com")}/>
+      </div>
+      
+      <div className="projects-section">
+        <ProjectBrowser></ProjectBrowser>
+      </div>
 
-        <div className="social-icons">
-          <MediaIcon className="resume-icon" image={resumeImage} onClick={() => open(`${resumeDoc}`)}/>
-          <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
-          <MediaIcon className="email-icon" image={emailImage} onClick={() => open("mailto:Brooks.m.Korbin@gmail.com")}/>
-          <MediaIcon className="linkedin-icon" image={linkedinImage} onClick={() => open('https://www.linkedin.com/in/korbinbrooks')}/>
-        </div>
-        
-        <div className="projects-section">
-          <ProjectBrowser></ProjectBrowser>
-        </div>
+      <div className="weather-section">
+        <WeatherDenver/>
+      </div>
 
-        <div className="weather-section">
-          <WeatherDenver/>
-        </div>
-
-      </ClearContainer>
-    </div> 
-    </>
+    </ClearContainer>
   )
 }
 

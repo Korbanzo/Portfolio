@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import projectJSON from '../assets/projects.json'
 import DoublyLinkedList from '../utils/DoublyLinkedList'
+import SkillBubble from './SkillBubble'
+
+// Alright, so we want to make there be some bubbles under each project description to show the tech stack used (languages and frameworks)
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];
-    jsonFile.map(project => (jsonArray.push([project.name, project.description, project.link, project.id])))
+    jsonFile.map(project => (jsonArray.push([project.name, project.description, project.link, project.tech_stack, project.id])))
 
     return jsonArray;
 }
@@ -70,6 +73,11 @@ const ProjectBrowser = ({}) => {
                     <>
                     <h2 className="project_browser_title" onClick={() => open(`${current.link}`)}>{current.name}</h2>
                     <p className="project_browser_description">{current.description}</p>
+                    <div className="project_browser_skills">
+                    { current.tech_stack.map((skill) => (
+                        <SkillBubble key={skill}>{skill}</SkillBubble>
+                    ))}                    
+                    </div>
                     </>
                 )
             }
