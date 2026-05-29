@@ -27,6 +27,8 @@ body {
 
 .social-icons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: var(--spacing-md);
   align-items: center;
   margin: var(--spacing-lg) 0 auto;
