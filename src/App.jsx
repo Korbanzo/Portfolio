@@ -21,7 +21,6 @@ function App() {
     <ClearContainer>
       <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="nameplate">Korbin Brooks</div>
-        <ProfilePicture />
       </div>
 
       <div className="social-icons">

@@ -24,16 +24,30 @@ body {
   }
 }
 
-@keyframes rainbowCircle {
-  from {
-    background-image: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet);
-  } to {
-    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-  }
+.rainbow-border {
+  width: fit-content;
+  padding: 6px;
+  border-radius: 50%;
+  --angle: 0deg;
+  background: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red);
+  animation: rotateAngle 10s linear infinite;
 }
 
-.animate-rainbow {
-  animation: rainbowCircle 1s infinite;
+.rainbow-border-inner {
+  background: black; /* match your page background */
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateAngle {
+  to { --angle: 360deg; }
 }
 
 .animate-next {
