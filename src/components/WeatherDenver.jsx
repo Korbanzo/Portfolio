@@ -67,17 +67,21 @@ const WeatherIcons = {
 
 
 
-const WeatherDenver = () => {
+const WeatherDenver = ({ weather: propWeather }) => {
 
-    const [weather, setWeather] = useState(null);
+    const [weather, setWeather] = useState(propWeather ?? null);
 
-    useEffect( () => {
+    useEffect(() => {
+        if (propWeather) {
+            setWeather(propWeather);
+            return;
+        }
         fetch(URL)
             .then((response) => response.json())
             .then((data) => {
-                setWeather(data); 
+                setWeather(data);
             });
-    }, [])
+    }, [propWeather])
 
     if (!weather) return <p>loading weather...</p>
 
