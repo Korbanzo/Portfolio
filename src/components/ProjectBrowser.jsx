@@ -3,7 +3,6 @@ import projectJSON from '../assets/projects.json'
 import DoublyLinkedList from '../utils/DoublyLinkedList'
 import SkillBubble from './SkillBubble'
 
-// Alright, so we want to make there be some bubbles under each project description to show the tech stack used (languages and frameworks)
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];

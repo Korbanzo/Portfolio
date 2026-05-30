@@ -65,6 +65,8 @@ const WeatherIcons = {
     "Thunderstorms": ThunderStorm
 }
 
+
+
 const WeatherDenver = () => {
 
     const [weather, setWeather] = useState(null);
@@ -80,7 +82,6 @@ const WeatherDenver = () => {
     if (!weather) return <p>loading weather...</p>
 
     const feetPerMeter = 3.28084;
-    const elevationFt = (weather.elevation * feetPerMeter).toFixed(0);
 
     const currentWeather = WeatherCodes[weather.current.weather_code];
     const currentIcon = WeatherIcons[currentWeather]

@@ -11,6 +11,10 @@ import ProjectBrowser from './components/ProjectBrowser'
 import ClearContainer from './components/ClearContainer'
 import ProfilePicture from './components/ProfilePicture'
 import WeatherDenver from './components/WeatherDenver'
+import WeatherBackground from './components/WeatherBackground'
+import PixelSnow from './components/PixelSnow'
+
+
 
 function App() {
   
@@ -18,27 +22,31 @@ function App() {
   // #7ef97e text color
 
   return (
-    <ClearContainer>
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div className="nameplate">Korbin Brooks</div>
-      </div>
+    <>
+    <WeatherBackground weatherType={"Snow"}/> 
 
-      <div className="social-icons">
-        <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
-        <MediaIcon className="resume-icon" image={resumeImage} onClick={() => open(`${resumeDoc}`)}/>
-        <MediaIcon className="linkedin-icon" image={linkedinImage} onClick={() => open('https://www.linkedin.com/in/korbinbrooks')}/>
-        <MediaIcon className="email-icon" image={emailImage} onClick={() => open("mailto:Brooks.m.Korbin@gmail.com")}/>
-      </div>
+      <ClearContainer>
+        <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div className="nameplate">Korbin Brooks</div>
+        </div>
       
-      <div className="projects-section">
-        <ProjectBrowser></ProjectBrowser>
-      </div>
-
-      <div className="weather-section">
-        <WeatherDenver/>
-      </div>
-
-    </ClearContainer>
+        <div className="social-icons">
+          <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
+          <MediaIcon className="resume-icon" image={resumeImage} onClick={() => open(`${resumeDoc}`)}/>
+          <MediaIcon className="linkedin-icon" image={linkedinImage} onClick={() => open('https://www.linkedin.com/in/korbinbrooks')}/>
+          <MediaIcon className="email-icon" image={emailImage} onClick={() => open("mailto:Brooks.m.Korbin@gmail.com")}/>
+        </div>
+      
+        <div className="projects-section">
+          <ProjectBrowser></ProjectBrowser>
+        </div>
+      
+        <div className="weather-section">
+          <WeatherDenver/>
+        </div>
+      </ClearContainer>
+    
+    </>
   )
 }
 
