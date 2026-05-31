@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
 
 import githubImage from './assets/github.png'
 import linkedinImage from './assets/linkedin.png'
@@ -12,12 +11,14 @@ import ClearContainer from './components/ClearContainer'
 import ProfilePicture from './components/ProfilePicture'
 import WeatherDenver from './components/WeatherDenver'
 import WeatherBackground from './components/WeatherBackground'
+import ToolBar from './components/ToolBar'
+
+const URL = "https://api.open-meteo.com/v1/forecast?latitude=39.7392&longitude=-104.9847&models=gfs_seamless&current=temperature_2m,is_day,weather_code&timezone=America%2FDenver&forecast_days=1&wind_speed_unit=mph&precipitation_unit=inch&temperature_unit=fahrenheit";
 
 function App() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    const URL = "https://api.open-meteo.com/v1/forecast?latitude=39.7392&longitude=-104.9847&models=gfs_seamless&current=temperature_2m,is_day,weather_code&timezone=America%2FDenver&forecast_days=1&wind_speed_unit=mph&precipitation_unit=inch&temperature_unit=fahrenheit";
     fetch(URL)
       .then((response) => response.json())
       .then((data) => setWeather(data))
@@ -25,8 +26,10 @@ function App() {
 
   return (
     <>
-      <WeatherBackground weather={weather} />
-
+      <ToolBar/>
+      <WeatherBackground weather={weather}/>
+      
+      
       <ClearContainer>
         <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="nameplate">Korbin Brooks</div>

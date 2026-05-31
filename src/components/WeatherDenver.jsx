@@ -92,7 +92,7 @@ const WeatherDenver = ({ weather: propWeather }) => {
 
     return (
         <>
-            <h2 style={{ margin: '0 0 1rem 0' }}>Denver, Colorado</h2>
+            <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem', fontWeight: '800' }}>Denver, Colorado</h2>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: "space-between", width: '100%', gap: '1.5rem', alignItems: 'center'}}>
                 <div style={{
                     backgroundImage: `url(${currentIcon})`, 

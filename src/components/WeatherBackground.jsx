@@ -1,8 +1,7 @@
-import WeatherDenver from './WeatherDenver';
-import PixelSnow from './PixelSnow'
-import Grainient from './Grainient'
-import Lightning from './Lightning'
-import Waves from './Waves'
+import PixelSnow from './weatherBgs/PixelSnow'
+import Grainient from './weatherBgs/Grainient'
+import Lightning from './weatherBgs/Lightning'
+import Waves from './weatherBgs/Waves'
 import React, { useState, useEffect } from 'react'
 
 const URL = "https://api.open-meteo.com/v1/forecast?latitude=39.7392&longitude=-104.9847&current=weather_code"
@@ -136,7 +135,7 @@ const Snow = (
         gamma={0.4545}
         variant="square"
     />
-);
+)
 
 const WeatherCodes = {
     0: 'Clear',
@@ -193,11 +192,16 @@ const WeatherBackgrounds = {
 }
 
 const WeatherBackground = ({ weather }) => {
-    if (!weather || !weather.current) return null
-    const code = weather.current.weather_code
-    const label = WeatherCodes[code]
-    const background = WeatherBackgrounds[label] || null
-    return <div className="weather-background">{background}</div>;
+    if (!weather || !weather.current) return null;
+    const code = weather.current.weather_code;
+    const label = WeatherCodes[code];
+    const background = WeatherBackgrounds[label] || null;
+
+    return (
+      <div className="weather-background">
+        {background}
+      </div>
+    )
 }
 
-export default WeatherBackground
+export default WeatherBackground;
