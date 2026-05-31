@@ -28,12 +28,18 @@ function App() {
     <>
       <ToolBar/>
       <WeatherBackground weather={weather}/>
-      
-      
-      <ClearContainer>
-        <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', width: '100vw', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{display: 'flex', flexDirection: 'column', width: '100vw', alignItems: 'center'}}>          
           <div className="nameplate">Korbin Brooks</div>
+          <div className="description">Hello, I'm Korbin Brooks!</div>
         </div>
+
+          <ProfilePicture/>
+        </div>
+      
+      
+        <ClearContainer>
       
         <div className="social-icons">
           <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
@@ -49,7 +55,7 @@ function App() {
         <div className="weather-section">
           <WeatherDenver/>
         </div>
-      </ClearContainer>
+        </ClearContainer>
     
     </>
   )

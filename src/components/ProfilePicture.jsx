@@ -6,13 +6,11 @@ const ProfilePicture = () => {
         <div style={
             {
                 backgroundImage: `url(${profileImage})`,
-                backgroundSize: 'cover',
+                backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                justifySelf: 'flex-end'
+                width: '100%',
+                height: '400px',
             }}>
 
         </div>
