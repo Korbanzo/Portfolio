@@ -3,17 +3,15 @@ import profileImage from '../assets/pfp.png'
 const ProfilePicture = () => {
 
     return (
-        <div style={
-            {
-                backgroundImage: `url(${profileImage})`,
-                backgroundSize: 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                width: '100%',
-                height: '400px',
-            }}>
-
-        </div>
+            <img 
+                src={profileImage} 
+                alt="profile"
+                style={{
+                    width: '400px',
+                    objectFit: 'contain',
+                    borderRadius: '5%'
+                }}
+            />
     );
 }
 

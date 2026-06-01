@@ -16,6 +16,7 @@ import ToolBar from './components/ToolBar'
 const URL = "https://api.open-meteo.com/v1/forecast?latitude=39.7392&longitude=-104.9847&models=gfs_seamless&current=temperature_2m,is_day,weather_code&timezone=America%2FDenver&forecast_days=1&wind_speed_unit=mph&precipitation_unit=inch&temperature_unit=fahrenheit";
 
 function App() {
+  // API call here so i can just send it as a prop to multiple components
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -29,14 +30,14 @@ function App() {
       <ToolBar/>
       <WeatherBackground weather={weather}/>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', width: '100vw', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{display: 'flex', flexDirection: 'column', width: '100vw', alignItems: 'center'}}>          
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '100vw', justifyContent: 'space-evenly', alignItems: 'center' }}>
+        <div style={{display: 'flex', flexDirection: 'column', width: 'fit-content', alignItems: 'center'}}>          
           <div className="nameplate">Korbin Brooks</div>
           <div className="description">Hello, I'm Korbin Brooks!</div>
         </div>
 
-          <ProfilePicture/>
-        </div>
+        <ProfilePicture/>
+      </div>
       
       
         <ClearContainer>
