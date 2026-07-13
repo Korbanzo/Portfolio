@@ -194,5 +194,19 @@ body {
 .tool_bar_btn:hover {
   background-color: white;
   cursor: pointer;
+}
 
+.pfp {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 480px) {
+  .pfp {
+    width: 250px;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
 }

@@ -14,8 +14,7 @@ const ClearContainer = ({ children }) => {
                 boxShadow: '0px 0px 15px green',
                 color: '#7ef97e',
                 padding: '3rem 2rem',
-                marginTop: '10px',
-                marginBottom: '10px'
+                margin: '10px'
             }}>
 
                 {children}
