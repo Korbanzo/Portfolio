@@ -206,7 +206,7 @@ body {
   max-width: 400px;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1079px) {
   .pfp {
     width: 250px;
   }
