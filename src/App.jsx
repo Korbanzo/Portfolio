@@ -16,7 +16,7 @@ import ToolBar from './components/ToolBar'
 const URL = "https://api.open-meteo.com/v1/forecast?latitude=39.7392&longitude=-104.9847&models=gfs_seamless&current=temperature_2m,is_day,weather_code&timezone=America%2FDenver&forecast_days=1&wind_speed_unit=mph&precipitation_unit=inch&temperature_unit=fahrenheit";
 
 function App() {
-  // API call here so i can just send it as a prop to multiple components
+  // Weather API call here so i can just send it as a prop to multiple components
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {

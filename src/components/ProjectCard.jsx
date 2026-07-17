@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
     {
         project && (
             <>
-            <div style={{height: 'fit-content', width: 'fit-content', justifySelf: 'center', padding: '10px', borderRadius: '10px', backgroundColor: 'rgb(0,0,0)'}}>
+            <div style={{height: 'fit-content', width: 'fit-content', justifySelf: 'center', padding: '10px'}}>
                 <h2 className="project_browser_title" onClick={() => open(`${project.link}`)}>{project.name}</h2>
                 <p className="project_browser_description">{project.description}</p>
                 <div className="project_browser_skills">

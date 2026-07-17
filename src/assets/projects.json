@@ -17,7 +17,7 @@
         "name": "Pinball Game",
         "description": "A little pinball game with my own physics.",
         "link": "https://github.com/Korbanzo/PinballGame",
-        "tech_stack": ["Java"],
+        "tech_stack": ["Java", "JavaFX"],
         "id": 3
     },
     {
