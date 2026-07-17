@@ -39,8 +39,7 @@ function App() {
         <ProfilePicture/>
       </div>
       
-      
-        <ClearContainer>
+      <ClearContainer>
       
         <div className="social-icons" id="social_icons">
           <MediaIcon className="github-icon" image={githubImage} onClick={() => open('https://github.com/Korbanzo')}/>
@@ -56,7 +55,7 @@ function App() {
         <div className="weather-section">
           <WeatherDenver/>
         </div>
-        </ClearContainer>
+      </ClearContainer>
     
     </>
   )
