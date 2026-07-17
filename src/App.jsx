@@ -30,7 +30,7 @@ function App() {
       <ToolBar/>
       <WeatherBackground weather={weather}/>
 
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '100vw', justifyContent: 'space-evenly', alignItems: 'center' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center' }}>
         <div style={{display: 'flex', flexDirection: 'column', width: 'fit-content', alignItems: 'center'}}>          
           <div className="nameplate">Korbin Brooks</div>
           <div className="description">Passionate to create websites and software that makes the world of technology a better place </div>
