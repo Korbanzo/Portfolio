@@ -80,6 +80,11 @@ body {
   margin: 0;
 }
 
+.project_browser_title,
+.project_browser_description {
+  justify-self: center;
+}
+
 .project_browser_skills {
   display: flex;
   flex-direction: row;

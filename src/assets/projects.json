@@ -40,5 +40,12 @@
         "link": "https://physics-project-group2.vercel.app",
         "tech_stack": ["React", "HTML", "CSS", "JavaScript"],
         "id": 6
+    },
+    {
+        "name": "TCP Server",
+        "description": "Server-side code of a TCP connection using POSIX API.",
+        "link": "https://github.com/Korbanzo/TCP-Server",
+        "tech_stack": ["C++", "Ubuntu 24.04"],
+        "id": 7
     }
 ]

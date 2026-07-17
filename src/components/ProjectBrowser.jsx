@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import projectJSON from '../assets/projects.json'
 import DoublyLinkedList from '../utils/DoublyLinkedList'
-import SkillBubble from './SkillBubble'
-
+import ProjectCard from './ProjectCard'
 
 const jsonToArray = (jsonFile) => {
     let jsonArray = [];
@@ -34,9 +33,11 @@ const ProjectBrowser = ({}) => {
         
         setCurrent(next);
 
-        if (!current.next) {
+        if (!next.next) {
             setAtEnd(end);
-        } else { setAtEnd(middle); }
+        } else { 
+            setAtEnd(middle); 
+        }
 
         setDirection("next");
         setKey(prev => prev + 1);
@@ -52,34 +53,24 @@ const ProjectBrowser = ({}) => {
         
         setCurrent(prev);
 
-        if (!current.prev) {
+        if (!prev.prev) {
             setAtEnd(beginning);
-        } else { setAtEnd(middle); }
+        } else { 
+            setAtEnd(middle); 
+        }
 
         setDirection("prev");
         setKey(prev => prev + 1);
     }
 
     return (
-        <div style={{ width: '100%' }}>
+        <div>
             <div className="arrow-controls">
                 <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(/arrow-left.svg)`}}/>
                 <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(/arrow-right.svg)`}}/>
             </div>
             <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""}`} style={{ color: "#7ef97e" }}>
-            {
-                current && (
-                    <>
-                    <h2 className="project_browser_title" onClick={() => open(`${current.link}`)}>{current.name}</h2>
-                    <p className="project_browser_description">{current.description}</p>
-                    <div className="project_browser_skills">
-                    { current.tech_stack.map((skill) => (
-                        <SkillBubble key={skill}>{skill}</SkillBubble>
-                    ))}                    
-                    </div>
-                    </>
-                )
-            }
+                <ProjectCard project={current}/>
             </div>   
         </div>
     );
