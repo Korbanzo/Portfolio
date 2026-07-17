@@ -210,11 +210,9 @@ body {
   .pfp {
     width: 250px;
   }
-}
 
-.description {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1rem;
-  
+  .description {
+    text-align: center;
+    width: 420px;
+  }
 }
