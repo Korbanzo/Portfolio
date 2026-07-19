@@ -1,8 +1,8 @@
-const ClearContainer = ({ children }) => {
+const ClearContainer = ({ children, style }) => {
 
     return (
         <>
-            <div style={{  
+            <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
@@ -13,7 +13,8 @@ const ClearContainer = ({ children }) => {
                 color: '#7ef97e',
                 margin: '10px auto',
                 alignSelf: 'center',
-                paddingBottom: '10px'
+                paddingBottom: '10px',
+                ...style
             }}>
 
                 {children}

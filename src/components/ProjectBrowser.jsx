@@ -33,7 +33,7 @@ const ProjectBrowser = ({}) => {
         
         setCurrent(next);
 
-        if (!next.next) {
+        if (!current.next) {
             setAtEnd(end);
         } else { 
             setAtEnd(middle); 
@@ -53,7 +53,7 @@ const ProjectBrowser = ({}) => {
         
         setCurrent(prev);
 
-        if (!prev.prev) {
+        if (!current.prev) {
             setAtEnd(beginning);
         } else { 
             setAtEnd(middle); 
