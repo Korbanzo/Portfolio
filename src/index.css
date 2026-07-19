@@ -203,8 +203,6 @@ body {
   margin-top: var(--spacing-lg);
 }
 
-
-
 .pfp {
   width: 100%;
   width: 250px;
@@ -219,5 +217,11 @@ body {
     text-align: center;
     width: 420px;
     font-size: .8rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .pfp {
+    width: 420px;
   }
 }
