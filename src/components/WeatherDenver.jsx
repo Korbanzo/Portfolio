@@ -65,8 +65,6 @@ const WeatherIcons = {
     "Thunderstorms": ThunderStorm
 }
 
-
-
 const WeatherDenver = ({ weather: propWeather }) => {
 
     const [weather, setWeather] = useState(propWeather ?? null);

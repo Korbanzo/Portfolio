@@ -119,6 +119,7 @@ body {
 
 .tool_bar_btn {
   transition: transform 0.3s ease, filter 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(89, 85, 85, 0.764);
 }
 
 .arrowButton:hover,
@@ -167,6 +168,12 @@ body {
   color: #7ef97e;
 }
 
+.description {
+  color: #fcfcfc;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(89, 85, 85, 0.764);
+}
+
 .social-icons {
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +214,8 @@ body {
   width: 100%;
   width: 250px;
 }
+
+
 
 @media (max-width: 1079px) {
   .nameplate {

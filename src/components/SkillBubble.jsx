@@ -7,7 +7,6 @@ const SkillBubble = ({children}) => {
             </div>    
         </div>
     );
-
 }
 
 export default SkillBubble;
