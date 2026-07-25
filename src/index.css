@@ -80,18 +80,29 @@ body {
   margin: 0;
 }
 
+.project_browser_card {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.project_browser_wrapper {
+  width: 100%;
+}
+
 .project_browser_title,
 .project_browser_description {
   justify-self: center;
+  text-align: center;
 }
 
 .project_browser_skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 15px;
-  margin: 10px auto;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin: 20px auto;
 }
 
 .arrow-controls {
@@ -203,7 +214,10 @@ body {
 .projects-section {
   margin: var(--spacing-lg) 0 auto;
   width: 100%;
-  text-align: left;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
 }
 
 .weather-section {
@@ -214,8 +228,6 @@ body {
   width: 100%;
   width: 250px;
 }
-
-
 
 @media (max-width: 1079px) {
   .nameplate {

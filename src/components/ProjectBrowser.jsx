@@ -64,15 +64,15 @@ const ProjectBrowser = ({}) => {
     }
 
     return (
-        <div>
+        <>
             <div className="arrow-controls">
                 <button className='arrowButton' id="prev" onClick={ShowPreviousProject} style={{backgroundImage: `url(/arrow-left.svg)`}}/>
                 <button className='arrowButton' id="next" onClick={ShowNextProject} style={{backgroundImage: `url(/arrow-right.svg)`}}/>
             </div>
-            <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""}`} style={{ color: "#7ef97e" }}>
+            <div key={key} className={`animate-${direction}${atEnd != middle ? "never mind lol" : ""} project_browser_wrapper`} style={{display: 'flex', color: "#7ef97e", alignItems: 'center', justifyContent: 'center', width: '100%' }}>
                 <ProjectCard project={current}/>
             </div>   
-        </div>
+        </>
     );
 };
 

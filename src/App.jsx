@@ -33,6 +33,7 @@ function App() {
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center' }}>
         <div style={{display: 'flex', flexDirection: 'column', width: 'fit-content', alignItems: 'center'}}>          
           <div className="nameplate">Korbin Brooks</div>
+          <div className="description">Computer Science Junior at WGU</div>
           <div className="description">Passionate to create websites and software that makes the world of technology greater</div>
         </div>
 
